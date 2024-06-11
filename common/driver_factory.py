@@ -22,4 +22,4 @@ class DriverFactory:
                 driver = getattr(webdriver, browser.capitalize())()
             except Exception(f'Invalid Browser Setting: {browser}'):
                 raise
-        return driver
+        return self._set_driver(driver)
